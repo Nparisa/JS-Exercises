@@ -52,3 +52,34 @@ function getReadingStatus(index){
 
 console.log(getReadingStatus(2));
 
+//task 5
+
+var cart = [ 
+   {
+       name: 'Shoes',
+       price: 560,
+       quantity: 4
+   },
+   {
+       name: 'Regular Tees',
+       price: 455.50,
+       quantity: 6
+   },
+   {
+       name: 'Socks',
+       price: 65.99,
+       quantity: 2
+   }];
+
+function totalbill(){
+    var totalAmout=0;
+   for (var i = 0 ;  i <cart.length; i++){
+      totalAmout = totalAmout +  cart[i].quantity*cart[i].price;
+    }
+  return totalAmout;
+}
+
+  console.log(totalbill());
+
+
+
