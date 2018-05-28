@@ -82,4 +82,47 @@ function totalbill(){
   console.log(totalbill());
 
 
+//task 5 a
+function addItem(newItem){
+    cart.push(newItem);
+    console.log(cart);
+}
+var newItem = {name :"Burger", price :250, quantity:2};
+addItem(newItem);
+ 
+ 
+ 
+//task 5 b
 
+console.log(cart.sort());
+ 
+
+//task 5 c
+
+function findByname(givenName){
+    
+    for(var i = 0 ; i < cart.length; i++){
+        if(cart[i].name == givenName ){
+         console.log("Name : "+cart[i].name + " Price : " + cart[i].price +" Quantity: "+cart[i].quantity);
+        }
+    }
+}
+
+findByname("Socks");
+
+
+ 
+ 
+
+//task 5 d
+
+
+function totalbill(){
+    var totalAmout=0;
+   for (var i = 0 ;  i <cart.length; i++){
+      totalAmout = totalAmout +  cart[i].quantity*cart[i].price;
+    }
+  return totalAmout;
+}
+
+console.log(totalbill());
